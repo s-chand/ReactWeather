@@ -3,8 +3,10 @@ var React = require('react');
 var Examples =(props)=>{
     return (
             <div>
-            Example Page
+            <h1>Example Page</h1>
+            <p>  Sample updates </p>
             </div>
+            
         )
 }
 module.exports = Examples;
