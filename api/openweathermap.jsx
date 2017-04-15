@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const OPEN_WEATHER_MAP_URL='http://api.openweathermap.org/data/2.5/weather?appid=f10d385199c903adf8fc68814b5525c0&';
+const OPEN_WEATHER_MAP_URL='http://api.openweathermap.org/data/2.5/weather?appid=f10d385199c903adf8fc68814b5525c0&units=metric&';
 module.exports ={
     getTemp: function(location){
         //f10d385199c903adf8fc68814b5525c0
@@ -14,7 +14,7 @@ module.exports ={
                 throw new Error(res.data.message)
             }
             else{
-                return res.data.main.temp;
+                return res.data.main.temp+" º Celsius";
             }
         },function(res){
             throw new Error(res.data.message)
